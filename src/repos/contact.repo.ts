@@ -10,16 +10,22 @@ export const getContactById = async (id: number) => {
 
 export const getPrimaryContactByEmail = async (email: string) => {
   const contact = await ds.getRepository(Contact).findOne({
-    where: { email, type: ContactType.PRIMARY },
+    where: { email },
   });
-  return contact;
+  if (!contact) return null;
+  if (contact.type === ContactType.PRIMARY || contact.linkedId === null)
+    return contact;
+  return await getContactById(contact.linkedId);
 };
 
 export const getPriamryContactByPhoneNumber = async (phoneNumber: string) => {
   const contact = await ds.getRepository(Contact).findOne({
     where: { phoneNumber, type: ContactType.PRIMARY },
   });
-  return contact;
+  if (!contact) return null;
+  if (contact.type === ContactType.PRIMARY || contact.linkedId === null)
+    return contact;
+  return await getContactById(contact.linkedId);
 };
 
 export const getContactByEmailAndPhone = async (
