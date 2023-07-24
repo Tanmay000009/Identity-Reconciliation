@@ -1,3 +1,4 @@
+import { IsEnum, IsOptional } from "class-validator";
 import {
   Column,
   CreateDateColumn,
@@ -16,14 +17,15 @@ export class Contact {
   @PrimaryGeneratedColumn("increment")
   id: number;
 
-  @Column("varchar", { nullable: false })
+  @Column("varchar", { nullable: true })
   phoneNumber: string;
 
-  @Column("varchar", { nullable: false })
+  @Column("varchar", { nullable: true })
   email: string;
 
-  @Column("int", { nullable: false })
-  linkedId: number;
+  @IsOptional()
+  @Column("int", { nullable: true })
+  linkedId: number | null;
 
   @Column("enum", { enum: ContactType, nullable: false })
   type: ContactType;
@@ -39,4 +41,18 @@ export class Contact {
     default: null,
   })
   deletedAt: Date;
+}
+
+export class CreateContact {
+  @IsOptional()
+  phoneNumber: string;
+
+  @IsOptional()
+  email: string;
+
+  @IsOptional()
+  linkedId: number | null;
+
+  @IsEnum(ContactType)
+  type: ContactType;
 }
