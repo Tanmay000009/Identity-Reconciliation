@@ -306,7 +306,7 @@ const handlePcByBothDiff = async (
 ) => {
   try {
     if (
-      primaryContactByEmail.createdAt > primaryContactByPhoneNumber.createdAt
+      primaryContactByEmail.createdAt < primaryContactByPhoneNumber.createdAt
     ) {
       const secondaryPhoneContacts = await getContactsByLinkedId(
         primaryContactByPhoneNumber.id,
