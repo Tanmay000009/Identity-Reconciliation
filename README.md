@@ -84,14 +84,14 @@ OR
 > Build the Docker image using the current directory as the build context
 
 ```
-docker build -t identity:latest .
+docker build -t <image-name>:<tag> .
 ```
 
 > Run the Docker container interactively, mapping the required port (30000 in this case)
 > and using the .env file from the host machine as a volume inside the container
 
 ```
-docker run -it -p 3000:3000 --env-file .env identity:latest
+docker run -it -p 3000:3000 --env-file .env <image-name>:<tag>
 ```
 
 6. If you are facing permission issues, run the following command:
