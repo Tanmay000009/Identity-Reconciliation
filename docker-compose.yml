@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  gofiber:
+  identiy_node:
     build: .
     ports:
       - "3000:3000"
