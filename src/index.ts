@@ -17,7 +17,7 @@ ds.initialize().then(() => {
 });
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("<h1>👋🏻 Hello from Glocal-Shop</h1>");
+  res.send("<h1>👋🏻 Hello!!</h1>");
 });
 
 app.use("/contact", require("./routes/contact.route"));
