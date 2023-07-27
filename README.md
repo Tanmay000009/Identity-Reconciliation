@@ -30,7 +30,7 @@ The Contact Information Management Web Service is a Node.js-based web service th
 
 ### Deployment
 
-Application is deployed on EC2 instance and can be accessed at http://3.110.172.56
+Application is deployed on EC2 instance and can be accessed at https://d326emlmo5pln5.cloudfront.net/
 
 ### Running Server Locally
 
