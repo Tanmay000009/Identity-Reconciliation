@@ -28,6 +28,10 @@ The Contact Information Management Web Service is a Node.js-based web service th
 - Docker (optional)
 - Docker Compose (optional)
 
+### Deployment
+
+Application is deployed on EC2 instance and can be accessed at http://3.110.172.56
+
 ### Running Server Locally
 
 1. Make sure you have Node.js installed on your system.
