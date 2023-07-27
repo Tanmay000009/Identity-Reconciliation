@@ -87,7 +87,7 @@ OR
 docker build -t <image-name>:<tag> .
 ```
 
-> Run the Docker container interactively, mapping the required port (30000 in this case)
+> Run the Docker container interactively, mapping the required port (3000 in this case)
 > and using the .env file from the host machine as a volume inside the container
 
 ```
