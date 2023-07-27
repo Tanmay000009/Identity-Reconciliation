@@ -47,8 +47,7 @@ npm run start
 1. Make sure you have Docker and Docker Compose installed on your system.
 2. Clone the repository.
 3. Navigate to the root directory of the project.
-4. Take reference from the `.env.example` file to create the environment file `.env` and update the environment variables as needed.
-5. Run the following command to build and start the application in Docker containers:
+4. Run the following command to build and start the application in Docker containers:
 
 ```
 docker-compose up -d
